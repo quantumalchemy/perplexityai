@@ -6,8 +6,10 @@ from time import sleep, time
 from threading import Thread
 from json import loads, dumps
 from random import getrandbits
-from websocket import WebSocketApp
-from requests import Session, get, post
+# from websocket import WebSocketApp
+# from requests import Session, get, post
+# https://github.com/nathanrchn/perplexityai/issues/67
+from curl_cffi.requests import Session,WebSocket, get, post
 
 class Perplexity:
     def __init__(self, email: str = None) -> None:
